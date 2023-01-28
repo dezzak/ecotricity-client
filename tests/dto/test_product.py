@@ -1,9 +1,9 @@
 import unittest
 
-from client.dto.Product import Product
+from client.dto import Product
 
 
-class TestMeterPoint(unittest.TestCase):
+class TestProduct(unittest.TestCase):
 
     def test_deserialisation(self):
         json = '{"displayName":"Green Gas","meterPoints":[{"industryId":"1234567890","fuelType":"gas"}]}'

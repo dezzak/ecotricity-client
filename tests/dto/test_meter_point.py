@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto.MeterPoint import MeterPoint
+from client.dto import MeterPoint
 
 
 class TestMeterPoint(unittest.TestCase):

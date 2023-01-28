@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from dataclass_wizard import JSONWizard
-from client.dto.Agreement import Agreement
+from . import Agreement
 
 
 @dataclass

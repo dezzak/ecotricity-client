@@ -1,7 +1,7 @@
 import datetime
 import unittest
 
-from client.dto.MeterRead import MeterRead
+from client.dto import MeterRead
 
 
 class TestMeterRead(unittest.TestCase):

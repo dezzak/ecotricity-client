@@ -1,7 +1,7 @@
 import datetime
 import unittest
 
-from client.dto.Agreement import Agreement
+from client.dto import Agreement
 
 
 class TestAgreement(unittest.TestCase):

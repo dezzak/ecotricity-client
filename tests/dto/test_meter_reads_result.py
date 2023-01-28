@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto.MeterReadsResult import MeterReadsResult
+from client.dto import MeterReadsResult
 
 
 class TestMeterReadsResult(unittest.TestCase):

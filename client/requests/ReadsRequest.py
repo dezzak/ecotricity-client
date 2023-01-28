@@ -2,7 +2,7 @@ import urllib.parse
 from json import JSONDecodeError
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
-from client.dto.MeterReadsResult import MeterReadsResult
+from client.dto import MeterReadsResult
 from client.exceptions.ApiException import ApiException
 from client.exceptions.EcotricityClientException import EcotricityClientException
 from client.exceptions.ResponseDecodeException import ResponseDecodeException

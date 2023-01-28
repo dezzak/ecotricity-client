@@ -2,10 +2,10 @@ import urllib.parse
 from json import JSONDecodeError
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
-from client.dto.AgreementsResult import AgreementsResult
-from client.exceptions.ApiException import ApiException
-from client.exceptions.EcotricityClientException import EcotricityClientException
-from client.exceptions.ResponseDecodeException import ResponseDecodeException
+from client.dto import AgreementsResult
+from client.exceptions import ApiException
+from client.exceptions import EcotricityClientException
+from client.exceptions import ResponseDecodeException
 
 
 class AgreementsRequest:

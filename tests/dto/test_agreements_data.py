@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto.AgreementsData import AgreementsData
+from client.dto import AgreementsData
 
 
 class TestAgreementsData(unittest.TestCase):

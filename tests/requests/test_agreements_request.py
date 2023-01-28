@@ -4,10 +4,10 @@ from urllib.error import HTTPError
 
 import httpretty
 
-from client.dto.AgreementsResult import AgreementsResult
-from client.exceptions.ResponseDecodeException import ResponseDecodeException
-from client.requests.AgreementsRequest import AgreementsRequest
-from client.exceptions.ApiException import ApiException
+from client.dto import AgreementsResult
+from client.exceptions import ResponseDecodeException
+from client.requests import AgreementsRequest
+from client.exceptions import ApiException
 
 
 class TestAgreementsRequest(unittest.TestCase):

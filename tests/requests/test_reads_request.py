@@ -5,8 +5,8 @@ from urllib.error import HTTPError
 import httpretty
 
 from client.exceptions.ResponseDecodeException import ResponseDecodeException
-from client.requests.ReadsRequest import ReadsRequest
-from client.dto.MeterReadsResult import MeterReadsResult
+from client.requests import ReadsRequest
+from client.dto import MeterReadsResult
 from client.exceptions.ApiException import ApiException
 
 
