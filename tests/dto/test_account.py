@@ -1,7 +1,7 @@
 import datetime
 import unittest
 
-from client.dto import Account
+from client.dto import Account, BillingAddress
 
 
 class TestAccount(unittest.TestCase):
@@ -30,6 +30,7 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(entity.balance, -12.34)
         self.assertEqual(entity.display_number, "12345678")
         self.assertEqual(entity.billing_method, "ebilling")
+        self.assertIsInstance(entity.display_billing_address, BillingAddress)
         self.assertEqual(entity.display_billing_address.country_code, "GB")
         self.assertEqual(entity.payment_method, "direct-debit")
         self.assertEqual(entity.account_class, "Invoice")

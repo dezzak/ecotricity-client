@@ -1,7 +1,7 @@
 import datetime
 import unittest
 
-from client.dto import Agreement
+from client.dto import Agreement, Product
 
 
 class TestAgreement(unittest.TestCase):
@@ -25,4 +25,5 @@ class TestAgreement(unittest.TestCase):
         self.assertEqual(entity.from_date, datetime.date.fromisoformat('2014-01-01'))
         self.assertEqual(entity.fuel_type, "electricity")
         self.assertEqual(len(entity.products), 1)
+        self.assertIsInstance(entity.products[0], Product)
         self.assertEqual(entity.products[0].display_name, "Green Electricity")

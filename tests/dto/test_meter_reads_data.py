@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto import MeterReadsData
+from client.dto import MeterReadsData, MeterRead
 
 
 class TestMeterReadsData(unittest.TestCase):
@@ -53,5 +53,6 @@ class TestMeterReadsData(unittest.TestCase):
         entity = MeterReadsData.from_json(json)
         self.assertEqual(len(entity.results), 2)
         self.assertEqual(len(entity.results[0]), 1)
+        self.assertIsInstance(entity.results[0][0], MeterRead)
         self.assertEqual(entity.results[0][0].id, "4c71505d-cbf3-4d2a-9354-21b325d18128")
         self.assertEqual(entity.results[1][0].id, "c9fd402b-e527-4bd7-be4f-0ff57c3dacdc")

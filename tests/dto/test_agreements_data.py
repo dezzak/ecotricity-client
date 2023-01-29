@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto import AgreementsData
+from client.dto import AgreementsData, Agreement
 
 
 class TestAgreementsData(unittest.TestCase):
@@ -19,4 +19,5 @@ class TestAgreementsData(unittest.TestCase):
         }"""
         entity = AgreementsData.from_json(json)
         self.assertEqual(len(entity.results), 1)
+        self.assertIsInstance(entity.results[0], Agreement)
         self.assertEqual(entity.results[0].id, "489b54f8-e2a3-444b-bcd8-baa57f79db12")
