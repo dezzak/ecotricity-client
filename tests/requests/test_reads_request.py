@@ -6,7 +6,7 @@ import httpretty
 
 from client.exceptions.ResponseDecodeException import ResponseDecodeException
 from client.requests import ReadsRequest
-from client.dto import MeterReadsResult
+from client.dto import MeterReadsResult, Session
 from client.exceptions.ApiException import ApiException
 
 
@@ -20,6 +20,7 @@ class TestReadsRequest(unittest.TestCase):
         customer_id = "chicken"
         meter_point = "12"
         auth = "Bearer someToken"
+        session = Session(customer_id, auth)
 
         #  And we have mocked the http responses
         httpretty.register_uri(
@@ -29,7 +30,7 @@ class TestReadsRequest(unittest.TestCase):
         )
 
         #  When the method is called
-        result = req.get_reads(customer_id, meter_point, auth)
+        result = req.get_reads(session, meter_point)
 
         #  Then we get a sensible result
         self.assertIsInstance(result, MeterReadsResult)
@@ -44,6 +45,7 @@ class TestReadsRequest(unittest.TestCase):
         customer_id = "chicken"
         meter_point = "12"
         auth = "Bearer someToken"
+        session = Session(customer_id, auth)
 
         #  And we have mocked the http responses
         httpretty.register_uri(
@@ -55,7 +57,7 @@ class TestReadsRequest(unittest.TestCase):
 
         #  When the method is called
         with self.assertRaises(ApiException) as context:
-            req.get_reads(customer_id, meter_point, auth)
+            req.get_reads(session, meter_point)
 
         #  Then we get an exception
         self.assertEqual(context.exception.message, "Failed to read from the API")
@@ -70,6 +72,8 @@ class TestReadsRequest(unittest.TestCase):
         customer_id = "chicken"
         meter_point = "12"
         auth = "Bearer someToken"
+        session = Session(customer_id, auth)
+
 
         #  And we have mocked the http responses
         httpretty.register_uri(
@@ -81,7 +85,7 @@ class TestReadsRequest(unittest.TestCase):
 
         #  When the method is called
         with self.assertRaises(ResponseDecodeException) as context:
-            req.get_reads(customer_id, meter_point, auth)
+            req.get_reads(session, meter_point)
 
         #  Then we get an exception
         self.assertEqual(context.exception.message, "Unable to decode response")

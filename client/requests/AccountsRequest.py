@@ -2,7 +2,7 @@ import urllib.parse
 from json import JSONDecodeError
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
-from client.dto import AccountsResult
+from client.dto import AccountsResult, Session
 from client.exceptions import ApiException
 from client.exceptions import EcotricityClientException
 from client.exceptions import ResponseDecodeException
@@ -18,13 +18,11 @@ class AccountsRequest:
         self.proto = proto
         self.path = path
 
-    def get_accounts(self, customer_id: str, auth: str) -> AccountsResult:
-        #  TODO - auth needs handling separately - possibly a session class? customer ID could go there too
-
-        variables = urllib.parse.quote(f'customers/{customer_id}/accounts')
+    def get_accounts(self, session: Session) -> AccountsResult:
+        variables = urllib.parse.quote(f'customers/{session.customer_id}/accounts')
 
         r = Request(f'{self.proto}://{self.host}{self.path}{variables}')
-        r.add_header('Authorization', auth)
+        r.add_header('Authorization', f'Bearer {session.auth_token}')
 
         try:
             return AccountsResult.from_json(urlopen(r).read().decode())

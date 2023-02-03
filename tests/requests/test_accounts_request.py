@@ -5,7 +5,7 @@ from urllib.error import HTTPError
 import httpretty
 
 from client.exceptions.ResponseDecodeException import ResponseDecodeException
-from client.dto import AccountsResult
+from client.dto import AccountsResult, Session
 from client.exceptions.ApiException import ApiException
 from client.requests import AccountsRequest
 
@@ -16,9 +16,10 @@ class TestAccountsRequest(unittest.TestCase):
         #  Given an AccountsRequest class
         req = AccountsRequest(proto="http", host="example.com")
 
-        #  And our variables
+        #  And a session
         customer_id = "chicken"
         auth = "Bearer someToken"
+        session = Session(customer_id, auth)
 
         #  And we have mocked the http responses
         httpretty.register_uri(
@@ -28,7 +29,7 @@ class TestAccountsRequest(unittest.TestCase):
         )
 
         #  When the method is called
-        result = req.get_accounts(customer_id, auth)
+        result = req.get_accounts(session)
 
         #  Then we get a sensible result
         self.assertIsInstance(result, AccountsResult)
@@ -39,9 +40,10 @@ class TestAccountsRequest(unittest.TestCase):
         #  Given an AccountsRequest class
         req = AccountsRequest(proto="http", host="example.com")
 
-        #  And our variables
+        #  And a session
         customer_id = "chicken"
         auth = "Bearer someToken"
+        session = Session(customer_id, auth)
 
         #  And we have mocked the http responses
         httpretty.register_uri(
@@ -53,7 +55,7 @@ class TestAccountsRequest(unittest.TestCase):
 
         #  When the method is called
         with self.assertRaises(ApiException) as context:
-            req.get_accounts(customer_id, auth)
+            req.get_accounts(session)
 
         #  Then we get an exception
         self.assertEqual(context.exception.message, "Failed to read from the API")
@@ -64,9 +66,10 @@ class TestAccountsRequest(unittest.TestCase):
         #  Given an AccountsRequest class
         req = AccountsRequest(proto="http", host="example.com")
 
-        #  And our variables
+        #  And a session
         customer_id = "chicken"
         auth = "Bearer someToken"
+        session = Session(customer_id, auth)
 
         #  And we have mocked the http responses
         httpretty.register_uri(
@@ -78,7 +81,7 @@ class TestAccountsRequest(unittest.TestCase):
 
         #  When the method is called
         with self.assertRaises(ResponseDecodeException) as context:
-            req.get_accounts(customer_id, auth)
+            req.get_accounts(session)
 
         #  Then we get an exception
         self.assertEqual(context.exception.message, "Unable to decode response")
