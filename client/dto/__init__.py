@@ -10,5 +10,6 @@ from .MeterRead import MeterRead
 from .MeterReadsData import MeterReadsData
 from .MeterReadsResult import MeterReadsResult
 from .Product import Product
+from .Session import Session
 from .TokensData import TokensData
 from .TokensResult import TokensResult
