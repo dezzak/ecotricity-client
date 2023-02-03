@@ -6,16 +6,14 @@ from client.dto import TokensResult
 from client.exceptions import ApiException
 from client.exceptions import EcotricityClientException
 from client.exceptions import ResponseDecodeException
+from client.requests.BaseRequest import BaseRequest
 
 
-class TokensRequest:
-    host: str
-    proto: str
+class TokensRequest(BaseRequest):
     path: str
 
     def __init__(self, host="api.ecotricity.co.uk", proto="https", path="/auth/v2/tokens"):
-        self.host = host
-        self.proto = proto
+        super().__init__(host, proto)
         self.path = path
 
     def get_tokens(self, username: str, password: str) -> TokensResult:
