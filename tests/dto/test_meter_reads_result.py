@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto import MeterReadsResult, MeterRead, MeterReadsData
+from ecotricity.client.dto import MeterReadsResult, MeterRead, MeterReadsData
 
 
 class TestMeterReadsResult(unittest.TestCase):

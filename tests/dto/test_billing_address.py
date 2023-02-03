@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto import BillingAddress
+from ecotricity.client.dto import BillingAddress
 
 
 class TestBillingAddress(unittest.TestCase):

@@ -1,7 +1,7 @@
 import datetime
 import unittest
 
-from client.dto import Account, BillingAddress
+from ecotricity.client.dto import Account, BillingAddress
 
 
 class TestAccount(unittest.TestCase):

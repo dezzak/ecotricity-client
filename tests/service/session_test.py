@@ -1,14 +1,14 @@
 import unittest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 import jwt
 
-from client.dto import Session, TokensResult, TokensData
-from client.service import open_session
+from ecotricity.client.dto import Session, TokensResult, TokensData
+from ecotricity.client.service import open_session
 
 
 class TestSession(unittest.TestCase):
-    @patch('client.service.session.TokensRequest')
+    @patch('ecotricity.client.service.session.TokensRequest')
     def test_open_session(self, tokens_request):
         #  Given a user and password
         username = 'chicken'

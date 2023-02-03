@@ -1,6 +1,6 @@
 import urllib.parse
-from client.dto import AccountsResult, Session
-from client.requests.BaseRequest import BaseRequest
+from ecotricity.client.dto import AccountsResult, Session
+from ecotricity.client.requests.BaseRequest import BaseRequest
 
 
 class AccountsRequest(BaseRequest):

@@ -2,7 +2,7 @@ import datetime
 from dataclasses import dataclass
 from dataclass_wizard import JSONWizard
 
-from client.dto.BillingAddress import BillingAddress
+from ecotricity.client.dto.BillingAddress import BillingAddress
 
 
 @dataclass

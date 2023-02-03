@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto import TokensResult, TokensData
+from ecotricity.client.dto import TokensResult, TokensData
 
 
 class TestTokensResult(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto import AgreementsResult, AgreementsData
+from ecotricity.client.dto import AgreementsResult, AgreementsData
 
 
 class TestAgreementsResult(unittest.TestCase):

@@ -2,8 +2,8 @@ from json import JSONDecodeError
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from dataclass_wizard import JSONWizard
-from client.dto import Session
-from client.exceptions import ApiException, ResponseDecodeException, EcotricityClientException
+from ecotricity.client.dto import Session
+from ecotricity.client.exceptions import ApiException, ResponseDecodeException, EcotricityClientException
 
 
 class BaseRequest:

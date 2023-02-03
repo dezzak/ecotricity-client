@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto import MeterPoint
+from ecotricity.client.dto import MeterPoint
 
 
 class TestMeterPoint(unittest.TestCase):

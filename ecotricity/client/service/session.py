@@ -1,7 +1,7 @@
 import jwt
 
-from client.dto import Session
-from client.requests import TokensRequest
+from ecotricity.client.dto import Session
+from ecotricity.client.requests import TokensRequest
 
 
 def open_session(username: str, password: str) -> Session:

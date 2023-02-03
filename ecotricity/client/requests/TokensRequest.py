@@ -2,11 +2,11 @@ import json
 from json import JSONDecodeError
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
-from client.dto import TokensResult
-from client.exceptions import ApiException
-from client.exceptions import EcotricityClientException
-from client.exceptions import ResponseDecodeException
-from client.requests.BaseRequest import BaseRequest
+from ecotricity.client.dto import TokensResult
+from ecotricity.client.exceptions import ApiException
+from ecotricity.client.exceptions import EcotricityClientException
+from ecotricity.client.exceptions import ResponseDecodeException
+from ecotricity.client.requests.BaseRequest import BaseRequest
 
 
 class TokensRequest(BaseRequest):

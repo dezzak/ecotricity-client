@@ -1,7 +1,7 @@
 import datetime
 import unittest
 
-from client.dto import MeterRead
+from ecotricity.client.dto import MeterRead
 
 
 class TestMeterRead(unittest.TestCase):

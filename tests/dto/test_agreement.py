@@ -1,7 +1,7 @@
 import datetime
 import unittest
 
-from client.dto import Agreement, Product
+from ecotricity.client.dto import Agreement, Product
 
 
 class TestAgreement(unittest.TestCase):

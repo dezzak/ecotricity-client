@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from dataclass_wizard import JSONWizard
 
-from client.dto import Account
+from ecotricity.client.dto import Account
 
 
 @dataclass

@@ -1,6 +1,6 @@
 import urllib.parse
-from client.dto import MeterReadsResult, Session
-from client.requests.BaseRequest import BaseRequest
+from ecotricity.client.dto import MeterReadsResult, Session
+from ecotricity.client.requests.BaseRequest import BaseRequest
 
 
 class ReadsRequest(BaseRequest):

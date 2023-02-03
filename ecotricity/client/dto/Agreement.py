@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from datetime import date
 from dataclass_wizard import JSONWizard
-from client.dto.Product import Product
+from ecotricity.client.dto.Product import Product
 
 
 @dataclass

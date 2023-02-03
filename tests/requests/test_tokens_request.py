@@ -4,10 +4,10 @@ from urllib.error import HTTPError
 
 import httpretty
 
-from client.exceptions.ResponseDecodeException import ResponseDecodeException
-from client.dto import TokensResult
-from client.exceptions.ApiException import ApiException
-from client.requests import TokensRequest
+from ecotricity.client.exceptions import ResponseDecodeException
+from ecotricity.client.dto import TokensResult
+from ecotricity.client.exceptions import ApiException
+from ecotricity.client.requests import TokensRequest
 
 
 class TestTokensRequest(unittest.TestCase):

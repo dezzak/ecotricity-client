@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto import Product
+from ecotricity.client.dto import Product
 
 
 class TestProduct(unittest.TestCase):

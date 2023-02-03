@@ -1,6 +1,6 @@
 import unittest
 
-from client.dto import AccountsData, Account
+from ecotricity.client.dto import AccountsData, Account
 
 
 class TestAccountsData(unittest.TestCase):

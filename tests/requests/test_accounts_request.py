@@ -4,10 +4,10 @@ from urllib.error import HTTPError
 
 import httpretty
 
-from client.exceptions.ResponseDecodeException import ResponseDecodeException
-from client.dto import AccountsResult, Session
-from client.exceptions.ApiException import ApiException
-from client.requests import AccountsRequest
+from ecotricity.client.exceptions import ResponseDecodeException
+from ecotricity.client.dto import AccountsResult, Session
+from ecotricity.client.exceptions import ApiException
+from ecotricity.client.requests import AccountsRequest
 
 
 class TestAccountsRequest(unittest.TestCase):
