@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 from dataclass_wizard import JSONWizard
 
-from . import TokenData
+from . import TokensData
 
 
 @dataclass
-class TokenResult(JSONWizard):
-    data: TokenData
+class TokensResult(JSONWizard):
+    data: TokensData
     status: str

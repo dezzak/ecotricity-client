@@ -3,6 +3,6 @@ from dataclass_wizard import JSONWizard
 
 
 @dataclass
-class TokenData(JSONWizard):
+class TokensData(JSONWizard):
     access: str
     refresh: str

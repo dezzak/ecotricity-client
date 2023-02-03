@@ -1,12 +1,12 @@
 import unittest
 
-from client.dto import TokenResult, TokenData
+from client.dto import TokensResult, TokensData
 
 
-class TestTokenResult(unittest.TestCase):
+class TestTokensResult(unittest.TestCase):
 
     def test_deserialisation(self):
         json = '{"data":{"access":"aToken","refresh":"unicorn"},"status":"success"}'
-        entity = TokenResult.from_json(json)
+        entity = TokensResult.from_json(json)
         self.assertEqual(entity.status, "success")
-        self.assertIsInstance(entity.data, TokenData)
+        self.assertIsInstance(entity.data, TokensData)
