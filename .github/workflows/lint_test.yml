@@ -23,3 +23,6 @@ jobs:
       - name: Unit test
         run: |
           python -m unittest discover -s tests
+      - name: Lint
+        run: |
+           pylint ecotricity --disable=R,C

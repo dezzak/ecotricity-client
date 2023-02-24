@@ -11,4 +11,3 @@ def open_session(username: str, password: str) -> Session:
     claims = jwt.decode(auth_token, options={'verify_signature': False})
     customer_id = claims['data']['customerId']
     return Session(customer_id, auth_token)
-
