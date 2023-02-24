@@ -1,8 +1,6 @@
 from dataclasses import dataclass
 from dataclass_wizard import JSONWizard
-
-# FIXME - why can't I just do `from . import MeterPoint`?
-from .MeterPoint import MeterPoint
+from ecotricity.client.dto.MeterPoint import MeterPoint
 
 
 @dataclass
