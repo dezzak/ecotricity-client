@@ -21,8 +21,8 @@ class BaseRequest:
         try:
             return target.from_json(urlopen(r).read().decode())
         except HTTPError as ex:
-            raise ApiException("Failed to read from the API", ex)
+            raise ApiException("Failed to read from the API") from ex
         except JSONDecodeError as ex:
-            raise ResponseDecodeException("Unable to decode response", ex)
+            raise ResponseDecodeException("Unable to decode response") from ex
         except Exception as ex:
-            raise EcotricityClientException("Error while getting readings", ex)
+            raise EcotricityClientException("Error while getting readings") from ex

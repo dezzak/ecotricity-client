@@ -1,5 +1,4 @@
 class EcotricityClientException(Exception):
 
-    def __init__(self, message: str, cause=None):
+    def __init__(self, message: str):
         self.message = message
-        self.__cause__ = cause
