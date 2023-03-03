@@ -4,7 +4,7 @@ from setuptools import setup
 
 here = pathlib.Path(__file__).parent.resolve()
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 LONG_DESCRIPTION = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
