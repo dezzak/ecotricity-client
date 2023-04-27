@@ -9,4 +9,4 @@ types-toml==0.10.8.6
 typing_extensions==4.5.0
 urllib3==1.26.15
 PyJWT==2.6.0
-pylint==2.17.2
+pylint==2.17.3
