@@ -5,7 +5,7 @@ httpretty==1.1.4
 idna==3.4
 requests==2.31.0
 toml==0.10.2
-types-toml==0.10.8.6
+types-toml==0.10.8.7
 typing_extensions==4.7.1
 urllib3==2.0.4
 PyJWT==2.8.0
